@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_signup_ui_starter/theme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class SignUpForm extends StatefulWidget {
 
@@ -47,10 +49,26 @@ class _SignUpFormState extends State<SignUpForm> {
               )
               :null
               
-          ),
-      
-          
+          ),    
         ), 
       );
+  }
+}
+
+class _RegistrationScreenState extends StatefulWidget {
+  final _auth = FirebaseAuth.instance;
+    String email;
+    String password;
+    bool showSpinner = false;
+  @override
+  __RegistrationScreenStateState createState() => __RegistrationScreenStateState();
+}
+
+class __RegistrationScreenStateState extends State<_RegistrationScreenState> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
+    );
   }
 }

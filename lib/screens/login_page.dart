@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_signup_ui_starter/screens/forgotpass_page.dart';
 import 'package:login_signup_ui_starter/screens/signup_page.dart';
+import 'package:login_signup_ui_starter/screens/home_page.dart';
 import 'package:login_signup_ui_starter/theme.dart';
 import 'package:login_signup_ui_starter/widget/login_form.dart';
 import 'package:login_signup_ui_starter/widget/login_options.dart';
@@ -52,7 +53,12 @@ class LoginPage extends StatelessWidget {
                ),
             ],),
             SizedBox(height: 20,),
-            PrimaryButton(buttonText: 'Login',),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+              },
+              child: PrimaryButton(buttonText: 'Login',),
+            ),
             SizedBox(height: 20,),
             Row(
               children: [
