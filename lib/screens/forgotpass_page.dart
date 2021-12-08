@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:login_signup_ui_starter/screens/login_page.dart';
 import 'package:login_signup_ui_starter/theme.dart';
